@@ -1,4 +1,13 @@
-type User {
-  id: ID! @id
-  name: String!
+type Mount @db(name: "mounts") {
+  _id: ID! @id
+  creatureId: Int
+  icon: String
+  isAquatic: Boolean
+  isFlying: Boolean
+  isGround: Boolean
+  isJumping: Boolean
+  itemId: Int
+  name: String
+  qualityId: Int
+  spellId: Int
 }
