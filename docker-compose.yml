@@ -13,6 +13,6 @@ services:
         databases:
           default:
             connector: mongo
-            schema: wow
-            uri: >-
-              mongodb+srv://rider:12345678Ah@nodecourse-zfafv.mongodb.net/wow?retryWrites=true
+            uri: mongodb+srv://rider:12345678Ah@nodecourse-zfafv.mongodb.net/wow
+            database: wow
+            migrations: false
