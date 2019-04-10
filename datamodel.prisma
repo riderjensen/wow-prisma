@@ -1,5 +1,5 @@
 type Mount @db(name: "mounts") {
-  _id: ID! @id
+  _id: ID! @unique @id
   creatureId: Int
   icon: String
   isAquatic: Boolean
