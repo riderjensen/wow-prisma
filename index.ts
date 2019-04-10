@@ -4,13 +4,13 @@ import { makePrismaSchema, prismaObjectType } from 'nexus-prisma'
 import { prisma } from './generated/prisma-client'
 import datamodelInfo from './generated/nexus-prisma'
 
-const Query = prismaObjectType({ 
+const Query = prismaObjectType({
   name: 'Query',
-  definition: t => t.prismaFields(['*'])
+  definition: t => t.prismaFields(['*']),
 })
-const Mutation = prismaObjectType({ 
+const Mutation = prismaObjectType({
   name: 'Mutation',
-  definition: t => t.prismaFields(['*'])
+  definition: t => t.prismaFields(['*']),
 })
 
 const schema = makePrismaSchema({
@@ -18,7 +18,7 @@ const schema = makePrismaSchema({
 
   prisma: {
     datamodelInfo,
-    client: prisma
+    client: prisma,
   },
 
   outputs: {
@@ -29,6 +29,6 @@ const schema = makePrismaSchema({
 
 const server = new GraphQLServer({
   schema,
-  context: { prisma }
+  context: { prisma },
 })
 server.start(() => console.log(`Server is running on http://localhost:4000`))
