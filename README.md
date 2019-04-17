@@ -4,3 +4,4 @@
 2. `cd wow-prisma`
 3. `docker-compose up -d`
 4. `prisma deploy`
+5. `npm start`
